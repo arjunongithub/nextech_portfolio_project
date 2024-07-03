@@ -1,0 +1,598 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #292C2D;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(8px); 
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+.audio-icon-button {
+  border: 0.0625rem white solid;
+  padding: 0.5rem;
+  width: 2.265rem;
+  height: 2.265rem;
+  border-radius: 50%;
+  background: transparent;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  z-index: 4200;
+  aspect-ratio: 1;
+  display: flex;
+  gap: 0.125rem;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  background-image: url("https://i.pinimg.com/736x/0f/f3/20/0ff320da67fecb07cf88ed4bc2841eb3.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1250 ;
+
+  @media (hover) {
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}  
+
+.splash-animation{
+  position: fixed;
+  z-index:1500;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color:rgb(49, 48, 48);
+  transition: 1s;
+}
+
+.logo-header{
+  position: absolute;
+  top:40% ;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#ffffff;
+  font-size:200px ;
+  text-align: center;
+  padding-bottom:60px ;
+}
+
+.logo{
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity:0;
+  font-family: Roboto;
+}
+
+.logo.active{
+  bottom:0;
+  opacity:1;
+  transition:ease-in-out 0.5s ;  
+}
+
+.logo.fade{
+  bottom:150px;
+  opacity:0;
+  transition:ease-in-out 0.5s ;
+}
+
+
+.header {
+  font-family: Raleway;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 60px;
+  padding-top:130px;
+  padding-bottom: 400px;
+  letter-spacing: 4px;
+  margin:20px;
+  margin-top:200px;
+  
+}
+
+.circle {
+  --circle-size: 40px;
+  position: fixed;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  border-radius: 100%;
+  top: calc(var(--circle-size) / 2 * -1);
+  left: calc(var(--circle-size) / 2 * -1);
+  pointer-events: none;
+  box-shadow: 5px 5px 50px rgb(128, 234, 208);
+  background-color:rgb(140, 234, 208); 
+  filter: blur(50px) brightness(1) contrast(200%);
+  border-style: solid;
+}
+
+.navbar {
+  color: #ffffffe5;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 4px;
+  text-align: center;
+  background-color: #222323;
+  border-bottom: 3px solid;
+  box-shadow: black 2px 2px 40px;
+  z-index: 1000;
+  background-color: #222323;
+  filter: hue-rotate(50%);
+
+
+}
+
+.intro {  
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: -10px;
+  margin-top: -46px;
+}
+
+
+.about {
+  position: relative ;
+  margin-right: 50px;
+}
+
+.projects {
+  margin-right: 50px;
+  position:relative;
+}
+
+.contact{
+  position:relative ;
+}
+
+
+
+.aboutMeHeader {
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+  font-family: Raleway;
+  font-size: 90px;
+  margin-left: 75px;
+  margin-right: 75px;
+  padding: 20px;
+  padding-top: 20px;
+  text-align: center;
+  text-shadow: #00f2fe 1px 1px 50px;
+}
+
+
+
+.aboutMeText {
+  color: rgb(255, 255, 255);
+  font-family: Raleway;
+  font-size: 22px;
+  margin-left: 75px;
+  margin-right: 600px;
+  padding: 10px;
+  margin: 0;
+  margin-top: -95px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.aboutCard {
+  border-radius: 10px;
+  box-shadow: 0 4px 80px #74EBD5;
+  margin: 2px;
+  align-content: center;
+  margin-right: 600px;
+  z-index:600px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(5px);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.hiddenMove{
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(5px);
+  transform: translateX(-75%);
+}
+
+.showMove{
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0px)
+}
+
+.navbar:hover {
+  transition: all 2s;
+  background-color: #292c2dd2
+}
+
+
+.projectsHeader{
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+  font-family: Raleway;
+  font-size: 90px;
+  text-align: center;
+  padding: 20px;
+  padding-top: 20px;
+  text-align: center;
+  text-shadow: rgb(144, 144, 144) 1px 1px 50px;
+  padding-top: 500px;
+  margin-bottom:300px ;
+}
+
+.contactHeader{
+  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+  font-family: Raleway;
+  font-size: 90px;
+  text-align: center;
+  padding: 20px;
+  padding-top: 20px;
+  text-align: center;
+  text-shadow: rgb(144, 144, 144) 1px 1px 50px;
+  padding-top: 250px;
+  margin-bottom:500px ;
+}
+
+.navbar-content{
+  color: white;
+  border-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar a:hover {
+  text-decoration: none;
+}
+
+.navbar-content{
+  padding: 10px 20px;
+  display:inline-block;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+
+}
+
+.navbar-content:hover{
+  color:#00f2fe;
+}
+
+.aboutImageCard{
+  width: 100%;
+  height: 100%;
+  margin-left:675px ;
+  margin-top: -673px;
+  z-index: 50px;
+}
+
+
+.headshot{
+  border-radius: 10px ;
+}
+
+.container {
+  min-height: 100vh;
+  background: #08071d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("bg.png"); 
+  max-width: 670px; 
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  margin-left:280px;
+}
+
+
+.containerHeader{
+  color: #fff;
+  margin-top: 20px;
+  width: 500px;
+  text-align: center;
+  font-family: Poppins ;
+  font-size:50px ;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left:70px ;
+}
+
+input{
+  width: 290px;
+  height: 40px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+  background: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+
+.input::placeholder{
+  color: #ddd;
+}
+
+#lastName,
+#mobile{
+  margin-left: 20px;
+}
+
+h4{
+  color: #fff;
+  font-weight: 300;
+  width: 600px;
+  margin-top: 20px;
+  font-family: Poppins ;
+}
+
+textarea{
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+  min-width: 600px;
+  max-width: 600px;
+  min-height: 80px;
+  max-height: 80px;
+}
+
+textarea::-webkit-scrollbar{
+  width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+  background-color: rgba(194,194,194,0.713);
+}
+
+#button{
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #333;
+  width: 100px;
+  padding: 0;
+  margin-right: 500px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+
+#button:hover{
+  opacity: 0.7;
+}
+
+.pythonImage{
+  width: 100px;
+  margin-right:400px;
+  margin-top:-300px ;
+}
+
+.skillsCard{ 
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+  font-family: Raleway;
+  font-size: 90px;
+  margin-left: 75px;
+  margin-right: 75px;
+  padding: 20px;
+  padding-top: 20px;
+  text-align: center;
+  text-shadow: #00f2fe 1px 1px 50px;
+  margin-top:300px ;
+}
+
+
+.skillList{
+  color: rgb(255, 255, 255);
+  font-family: Raleway;
+  font-size: 45px;
+}
+
+
+.skill{
+  color: rgb(255, 255, 255);
+  font-family: Raleway;
+  font-size: 45px;
+  text-shadow:none ;
+  text-align: center;
+  margin-left: 240px;
+
+}
+
+
+.snakePic{
+  width: 300px;
+  height: 300px;
+  margin-top:-450px ;
+  border-radius: 10px;
+  z-index:500px ;
+
+}
+.snakeText{
+  color: #ffffff;
+  font-size: 20px ;
+  margin-left:350px;
+  font-family: Raleway;
+  margin-right:250px ;
+  text-align: justify;
+  margin-top:-200px;
+  margin-bottom:500px;
+  z-index:300px ;
+
+}
+
+.aotPic{
+  width: 300px;
+  height: 300px;
+  margin-top:-450px ;
+  border-radius: 10px;
+  margin-left: 965px;
+  z-index:500px ;
+
+}
+.aotText{
+  color: #ffffff;
+  font-size: 20px ;
+  margin-left:350px;
+  font-family: Raleway;
+  margin-right:350px ;
+  text-align: justify;
+  margin-top:-200px;
+  margin-bottom:500px;
+  z-index:300px ;
+
+
+
+}
+
+.aiPic{
+  width: 300px;
+  height: 300px;
+  margin-top:-450px ;
+  border-radius: 10px;
+  z-index:500px ;
+
+}
+.aiText{
+  color: #ffffff;
+  font-size: 20px ;
+  margin-left:350px;
+  font-family: Raleway;
+  margin-right:250px ;
+  text-align: justify;
+  margin-top:-250px;
+  margin-bottom:500px;
+  z-index:300px ;
+
+}
+
+
+
+.socials .btn {
+  display: inline-block;
+  color: #000000;
+  background: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,20);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.6);
+  letter-spacing: 2px;
+  transition: 0.2s;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+
+}
+.socials .btn:hover {
+  color: #ffffff;
+  background: #000012;
+  text-shadow: 1px 1px 1px rgba(0,0,0,20);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+  transform: scale(1.1);
+  transition: 0.2s;
+  letter-spacing: 2px;
+  border-radius: 5px;
+
+}
+.socials > .socials-buttons {
+  margin-top: 150px;
+
+}
+.socials-buttons{
+  border-style: none;
+  border-color: transparent;
+  font-family: Raleway;
+  size:30px ;
+  margin: 900px;
+  border-radius: 5px;
+  margin-top: -300px;
+  padding: 30px;
+}
+
+
+.socials{
+  margin-top: -500px;
+  margin-left: 100px;
+}
+
+
+.email{
+  font-size:40px;
+  margin-left: -610px;
+  margin-top: 200px;
+
+
+}
+
+.sourceHeader{
+  color: rgb(255, 255, 255);
+  margin-top: 15px;
+  font-family: Raleway;
+  font-size: 90px;
+  margin-left: 75px;
+  margin-right: 75px;
+  padding: 20px;
+  padding-top: 20px;
+  text-align: center;
+  text-shadow: #000000 1px 1px 50px;
+  border-style: none;
+  text-align: center;
+  margin-left: 450px;
+  margin-top: -100px;
+  transition: 3s;
+}
+
+.sourceHeader:hover {
+  color: #00f2fe;
+  text-shadow: #00f2fe 1px 1px 50px;
+  transition: 3s;
+
+}
+
+

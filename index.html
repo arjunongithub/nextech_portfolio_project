@@ -1,0 +1,410 @@
+<!DOCTYPE html>    
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <title>Portfolio_Project</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="script.js" defer></script>
+    </head>
+
+    <div class="circle"></div>
+
+    <body>
+
+      <button id="audiobutton" class="audio-icon-button"></button>
+
+      <audio id="audio" loop src="https://assets.codepen.io/907471/cosmic_dreams.mp3"></audio>
+
+      <script>
+        (() => {
+          window.audiobutton.addEventListener('click', () => {
+            if (window.audio.paused) {
+              window.audio.play();
+            } else {
+              window.audio.pause();
+            }
+          });
+        })();
+      </script>
+
+      <!--INTRO-->
+        <div class="splash-animation">
+          <h1 class = "logo-header">
+            <span class="logo">HELLO</span><br><span class = "logo">THERE</span>
+          </h1>
+        </div>
+
+      <!--NAVBAR-->
+        <div class="navbar">
+          <a href = "#about" data-value="ABOUT" class="navbar-content about">ABOUT</a>
+          <a href = "#skills" data-value="SKILLS" class="navbar-content about">SKILLS</a>
+          <a href = "#projects"data-value="PROJECTS" class="navbar-content projects">PROJECTS</a>
+          <a href = "#contact"data-value="CONTACT"class="navbar-content contact">CONTACT</a>
+        </div>
+        
+
+      <!--INTRO FOR PORTFOLIO (with the Hello world and I am arjun stuff)-->
+      <section class = "hidden">
+        <div class="intro">
+          <h1 class="header">
+            I am Arjun Sharma | मैं अर्जुन शर्मा हूं
+          </h1>
+        </div>
+      </section>  
+
+      <!--THE STUFF-->  
+      <section class="hidden" id = "about">
+        <div class = aboutCard>
+          <div class = "starter">
+            <h1 class = "aboutMeHeader">
+              About Me 
+            </h1>
+            <br>
+            <p class = "aboutMeText">
+             The future. The future is something that has both haunted me and excited me ever since 
+             I was a kid. I've wanted to be a lot of things when I was little. Those things included 
+             being an NBA player, a car mechanic, a professional gamer, a doctor and more. Little me
+             never thought about technology. It was just there.
+             <br>
+             <br>
+             It started standing out to me when I was
+             in 7th grade. It was just something that clicked. I proceeded to learn Python and in 9th grade 
+             I started lerning Javascript due to my AP CSP class.I have been learning ever since. That has 
+             led me to where I am today. I am a rising Sophmore (class of 2027) and I have an intrest in 
+             both technology and buissness and I aspire to find a carrer that has aspects of both.
+            </p>  
+          </div> 
+        </div> 
+      </section> 
+      <section class="hiddenMove" id = "aboutImage">
+        <div class = "aboutImageCard">
+          <img class = "headshot" src = "https://i.ibb.co/bQKZpMC/Pic-of-me.jpg" alt="Pic-of-me">
+        </div>
+
+
+      <section class = "hidden" id = "skills">
+        <div class = "skillsCard">
+          <div class = "skillsHeader">
+            <h1 class = "skillsHeader">Skills</h1>
+            <div class = "skillList">
+              <h4 class = "skill">Python</h4> 
+              <h4 class = "skill">HTML</h4> 
+              <h4 class = "skill">CSS</h4> 
+              <h4 class = "skill">JavaScript</h4>  
+
+            </div>
+          </div>
+      </section>  
+
+
+      <section class = "hiddenMove" id = "projects">
+        <div class = "projectsCard">
+          <h1 class = "projectsHeader">
+            Projects
+          </h1>
+
+          <img  class = "snakePic hiddenMove" src="https://i.ibb.co/kVZZvJB/Screenshot-2024-07-02-153456.png" alt="Snake Pic">
+          <p class = "snakeText hiddenMove">
+            This is a project that I decided to do during the Catapult program but it wasn't a project that was 
+            for Catapult, it was a personal project that I decided to do in order to test myself. I decided to 
+            do a snake project since I wanted to do a game that wasn't too hard to do but still was somewhat 
+            challenging for me.  
+          </p>
+
+          <img class="aotPic hiddenMove" src="https://i.ibb.co/s2sdfyb/Screenshot-2024-07-02-165527.png" alt="Attack on titan pic">
+          <p class = "aotText hiddenMove">
+            This is a project that I did during the Catapult program. It was a project that was supposed to 
+            be like a Buzzfeed quiz (example: what Harry Potter Character are you?). I did mine over  Attack on Titan
+            because I was watching AOT at the time and I was intersted in the series due to the story telling and plot.
+            It was "What Titan are you" and based off of your answers to the questions it would output a Titan that would
+            fit them.   
+          </p>
+
+          <img class="aiPic hiddenMove" src="https://i.ibb.co/Qmd54g5/Screenshot-2024-07-02-170743.png"alt = "AI number guesser pic">
+          <p class = "aiText hiddenMove">
+            This is a project that I did during my AP CSP class. It was a project that was designed to test our
+            knowledge of the binary search tree algorithm. The way it works is you first have to enter in a maximum
+            number that you want the computer to guess(inclusive). Then the computer will utilize the binary search tree 
+            algorithm in order to reach the number the the user has in mind. The user will indicate if it is too high or too low
+            and the computer will adjust accordingly. Once the computer has guessed correctly, the user is instructed to click the 
+            "Correct" Button and that transfers it to the winScreen which outputs the number of guesses.
+          </p>
+
+
+        </div>
+      </section>  
+
+
+      <section class = "hidden" id = "contact"></section>
+
+      <div class="container">
+        <form>
+            <h1 class = "containerHeader">Contact Me</h1>
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="mobile" placeholder="Mobile" required>
+            <h4>Type Your Message Here...</h4>
+            <textarea class="textarea" required></textarea>
+            <input type="submit" value="Send" id="button">
+        </form>
+    </div>
+
+
+
+
+    <div class="socials">
+      <div class="list-inline socials-buttons">
+        <a href="https://www.linkedin.com/in/arjun-sharma-358352316/" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw" area-hidden="true"></i>LinkedIn</a>
+        <br>
+        <a href="https://github.com/arjunongithub" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-facebook fa-fw" area-hidden="true"></i>Github</a>
+        <br>
+        <h4 class = "email" >arjun.sh0301@gmail.com</h4>
+      </div>
+    </div>
+
+
+    <div class = "source">
+      <a class = "sourceHeader" href="https://docs.google.com/document/d/1oqMEi-3JjUuYtvvKWCR3u7YjG4eY7L-KS0--x5pABaQ/edit?usp=sharing">Sources</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      // Splash animation script
+      let intro = document.querySelector(".splash-animation");
+      let logoSpan = document.querySelectorAll(".logo");
+
+      window.addEventListener("DOMContentLoaded", () => {
+          setTimeout(() => {
+              logoSpan.forEach((span, idx) => {
+                  setTimeout(() => {
+                      span.classList.add("active");
+                  }, (idx + 1) * 400);
+              });
+
+              setTimeout(() => {
+                  logoSpan.forEach((span, idx) => {
+                      setTimeout(() => {
+                          span.classList.remove("active");
+                          span.classList.add("fade");
+                      }, (idx + 1) * 50);
+                  });
+              }, 2000);
+
+              setTimeout(() => {
+                  intro.style.top = '-100vh';
+              }, 2300);
+          }, 500); 
+      });
+
+      // Intersection Observer script
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                entry.target.classList.add('showMove');
+            } else {
+                entry.target.classList.remove('show');
+                entry.target.classList.remove('showMove');
+            }
+        });
+      });
+
+      const hiddenElements = document.querySelectorAll('.hidden, .hiddenMove, .helloWorld, .subtext');
+      hiddenElements.forEach((el) => observer.observe(el));
+
+      // Navbar hover animation script
+      document.querySelector(".contact").onmouseover = event => {  
+          let iteration = 0;
+          clearInterval(interval);
+          interval = setInterval(() => {
+            event.target.innerText = event.target.innerText
+              .split("")
+              .map((letter, index) => {
+                if(index < iteration) {
+                  return event.target.dataset.value[index];
+                }
+                return letters[Math.floor(Math.random() * 26)]
+              })
+              .join("");
+            if(iteration >= event.target.dataset.value.length){ 
+              clearInterval(interval);
+            }
+            iteration += 1 / 3;
+          }, 30);
+      }
+
+      document.querySelector(".projects").onmouseover = event => {  
+          let iteration = 0;
+          clearInterval(interval);
+          interval = setInterval(() => {
+            event.target.innerText = event.target.innerText
+              .split("")
+              .map((letter, index) => {
+                if(index < iteration) {
+                  return event.target.dataset.value[index];
+                }
+                return letters[Math.floor(Math.random() * 26)]
+              })
+              .join("");
+            if(iteration >= event.target.dataset.value.length){ 
+              clearInterval(interval);
+            }
+            iteration += 1 / 3;
+          }, 30);
+      }
+
+      // Custom cursor script
+      console.clear();
+      const circleElement = document.querySelector('.circle');
+      const mouse = { x: 0, y: 0 }; 
+      const previousMouse = { x: 0, y: 0 }
+      const circle = { x: 0, y: 0 }; 
+      let currentScale = 0;
+      let currentAngle = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+      });
+
+      const speed = 0.17;
+      const tick = () => {
+        circle.x += (mouse.x - circle.x) * speed;
+        circle.y += (mouse.y - circle.y) * speed;
+        const translateTransform = `translate(${circle.x}px, ${circle.y}px)`;
+        const deltaMouseX = mouse.x - previousMouse.x;
+        const deltaMouseY = mouse.y - previousMouse.y;
+        previousMouse.x = mouse.x;
+        previousMouse.y = mouse.y;
+        const mouseVelocity = Math.min(Math.sqrt(deltaMouseX**2 + deltaMouseY**2) * 4, 150);
+        const scaleValue = (mouseVelocity / 150) * 0.5;
+        currentScale += (scaleValue - currentScale) * speed;
+        const scaleTransform = `scale(${1 + currentScale}, ${1 - currentScale})`;
+        const angle = Math.atan2(deltaMouseY, deltaMouseX) * 180 / Math.PI;
+        if (mouseVelocity > 20) {
+          currentAngle = angle;
+        }
+        const rotateTransform = `rotate(${currentAngle}deg)`;
+        circleElement.style.transform = `${translateTransform} ${rotateTransform} ${scaleTransform}`;
+        window.requestAnimationFrame(tick);
+      }
+      tick();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
